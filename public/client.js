@@ -3,8 +3,8 @@ $(document).ready(function () {
   let socket = io();
 
   socket.on('user', (data) => { //escucha evento 'user del servidor'
-    $('#num-users').text(data.currentUsers + ' users online');
-    let message = data.username + (data.connected ? ' has joined the chat.' : ' has left the chat.');
+    $('#num-users').text(data.currentUsers + ' usuarios online');
+    let message = data.username + (data.connected ? ' se ha unido al chat.' : ' se pira del chat.');
     $('#messages').append($('<li>').html('<b>' + message + '</b>'));
   });
 

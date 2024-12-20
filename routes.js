@@ -4,8 +4,8 @@ module.exports = function (app, myDataBase) {
  app.route('/').get((req, res) => {
   // Change the response to render the Pug template
     res.render('index', {
-      title: 'Connected to Database',
-      message: 'Please login',
+      title: 'La Base de datos OK!',
+      message: 'Entra si puedes...',
       showLogin: true,
       showRegistration: true,
       showSocialAuth: true
