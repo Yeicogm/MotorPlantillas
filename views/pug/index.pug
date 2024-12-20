@@ -1,44 +1,47 @@
 html
   head
-    title Practica Node/Express/Pug/Socket
+    title Practica Node/Express/Pug/Socket/Sesiones
     meta(name='description', content='Pagina Principal')
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='/public/styleIndex.css')
   body
-    h1.border.center Practica Node/Express/Pug/Socket
+    h1.border.center Practica Node/Express/Pug/Socket/Sesiones
     h2.center#pug-success-message
     | Pug a renderizado OK!
     br
     | #{title}
     p#pug-variable=message
            
-    if showLogin
+    if showLogin || showRegistration
       hr
-      h2.center Login
-      form(action='/login', method='post').center
-        div
-          label Usuario:
-          input(type='text', name='username')
-        div
-          label Password:
-          input(type='password', name='password')
-        div
-          input(type='submit', value='Entra!')
-          
-    if showRegistration
-      hr
-      h2.center Registro
-      form(action='/register', method='post').center
-        div
-          label Username:
-          input(type='text', name='usuario')
-        div
-          label Password:
-          input(type='password', name='password')
-        div
-          input(type='submit', value='Registrate')
+      .form-container.center
+        if showLogin
+          .form-box
+            h2.center Login
+            form(action='/login', method='post')
+              div
+                label Usuario:
+                input(type='text', name='username')
+              div
+                label Password:
+                input(type='password', name='password')
+              div
+                input(type='submit', value='Entra!')
+                
+        if showRegistration
+          .form-box
+            h2.center Registro
+            form(action='/register', method='post')
+              div
+                label Usuario:
+                input(type='text', name='username')
+              div
+                label Password:
+                input(type='password', name='password')
+              div
+                input(type='submit', value='Registrate')
 
     if showSocialAuth
       hr

@@ -17,7 +17,7 @@ module.exports = function (app, myDataBase) {
     });
 
 app.route('/login').post(passport.authenticate('local', { failureRedirect: '/' }), (req, res) => {
-  res.redirect('/profile');
+  res.render('chat', {user: req.user });
   //autenticación es exitosa,usuario será guardado en req.user.
 })
 
@@ -36,6 +36,7 @@ app.route('/logout')
 app.route('/register')
   .post((req, res, next) => {
     const hash = bcrypt.hashSync(req.body.password, 12);
+   console.log("U: " + req.body.username + " P: "+ req.body.password)
     myDataBase.findOne({ username: req.body.username }, (err, user) => {
       if (err) {
         next(err);

@@ -1,110 +1,101 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color:steelblue;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  h1, h2 {
-    color: #FFFFFF;
-    
-  }
-  /* Estilo del enlace normal */
-a {
-  color: #FFFFFF; /* Color del enlace normal */
+  font-family: Arial, sans-serif;
+  background-color: steelblue;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+h1, h2 {
+  color:   #000306;
+}
+
+h1 {
+  border-bottom: 2px solid #FFFFFF;
+  padding-bottom: 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-around; /* Distribuye el espacio entre los formularios */
+  align-items: stretch; /* Hace que los formularios tengan la misma altura */
+  width: 80%; /* Ajusta el ancho según sea necesario */
+  margin: 20px auto; /* Centra el contenedor horizontalmente */
+}
+
+.form-box {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 45%; /* Ajusta el ancho de cada formulario */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 3px;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.login a {
+  display: block;
+  padding: 10px 0;
+  color: #000204;
   text-decoration: none;
 }
 
-/* Estilo del enlace cuando se ha visitado */
-a:visited {
-  color: purple; /* Cambiar a púrpura después de ser pulsado */
+.login a:hover {
+  text-decoration: underline;
 }
 
-/* Otras pseudo-clases para enlaces */
-a:hover {
-  color: red; /* Cambia el color cuando el enlace es pasado por encima */
+hr {
+  width: 100%;
+  border: 1px solid #ddd;
+  margin: 20px 0;
 }
 
-a:active {
-  color: green; /* Cambia el color cuando el enlace está siendo clickeado */
+p#pug-variable {
+  color: #333;
+  font-style: italic;
+  margin: 10px 0;
 }
-
-  h1 {
-    border-bottom: 2px solid#FFFFFF;
-    padding-bottom: 10px;
-  }
-  
-  .center {
-    text-align: center;
-  }
-  
-  form {
-    background: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    margin: 20px 0;
-  }
-  
-  form div {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007BFF;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
-  .login a {
-    display: block;
-    padding: 10px 0;
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  .login a:hover {
-    text-decoration: underline;
-  }
-  
-  hr {
-    width: 100%;
-    border: 1px solid #ddd;
-    margin: 20px 0;
-  }
-  
-  p#pug-variable {
-    color: #333;
-    font-style: italic;
-    margin: 10px 0;
-  }
-  
