@@ -8,6 +8,7 @@ const session = require('express-session');
 const passport = require('passport');
 const routes = require('./routes.js');
 const auth = require('./auth.js');
+//const eventos = require('./eventos.js');
 
 const app = express();
 //chat
@@ -22,6 +23,7 @@ const store = new MongoStore({ url: URI });
 app.set('view engine', 'pug');
 app.set('views', './views/pug');
 //console.log(process.env.SESSION_SECRET);
+
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: true,
@@ -83,7 +85,7 @@ myDB(async client => {
   app.use((req, res, next) => {
     res.status(404)
       .type('text')
-      .send('NO!');
+      .send('NO! cheeeee!');
   });
 }).catch(e => {
   app.route('/').get((req, res) => {
@@ -103,4 +105,4 @@ function onAuthorizeFail(data, message, error, accept) {
 const PORT = process.env.PORT || 3000;
 http.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
-});
+  });
