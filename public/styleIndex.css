@@ -82,6 +82,7 @@ input[type="submit"]:hover {
   padding: 10px 0;
   color: #000204;
   text-decoration: none;
+  background-color: #fbfbfb;
 }
 
 .login a:hover {

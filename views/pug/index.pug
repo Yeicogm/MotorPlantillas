@@ -17,14 +17,14 @@ html
     if showLogin || showRegistration
       hr
       .form-container.center
-      
+
         if showLogin
-          .form-box
+          .form-box(id='formLogin')
             h2.center Login
-            form(action='/login', method='post')
+            form(action='/login', method='post', )
               div
                 label Usuario:
-                input(type='text', name='username')
+                input(type='text', name='username', id='login-user')
               div
                 label Password:
                 input(type='password', name='password', id='login-password')
@@ -32,7 +32,7 @@ html
                 input(type='submit', value='Entra!')
                 
         if showRegistration
-          .form-box
+          .form-box(id='formReg')
             h2.center Registro
             form(action='/register', method='post')
               div
@@ -48,6 +48,6 @@ html
       hr
       h2.center Login Externo
       .login.center
-        a(href='/auth/github').text > Login con Github! <
+        a(href='/auth/github').text Login con Github! 
     
     script(src='/public/eventos.js')

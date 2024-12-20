@@ -48,8 +48,8 @@ io.use(
     secret: process.env.SESSION_SECRET,
     store: store,
     success: onAuthorizeSuccess,
-    fail: onAuthorizeFail
-  })
+    fail: onAuthorizeFail    
+  })    
 );
 
 myDB(async client => {
