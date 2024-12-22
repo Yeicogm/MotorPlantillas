@@ -31,7 +31,7 @@ h1 {
   border: 2px solid #000; /* Borde negro de 2 píxeles */
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  margin: 20px 0; /* Margen superior e inferior de 20 píxeles */
+  margin: 5px 0; /* Margen superior e inferior de 20 píxeles */
   display: block; /* Hace que la imagen se comporte como un bloque */
   object-fit: cover; /* Ajusta el contenido de la imagen */
 }
@@ -55,6 +55,17 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   margin: 3px;
+  opacity: 1; 
+  visibility: visible; 
+  transition: opacity 0.9s ease-in-out, visibility 0.9s ease-in-out;
+}
+.form-box.oculto {
+  opacity: 0;
+  visibility: hidden;
+}
+.form-box.borra {
+  display: none;
+  
 }
 
 form div {

@@ -22,15 +22,24 @@ document.addEventListener('DOMContentLoaded', () => {
       var formularioLogin = document.getElementById("formLogin");
   
       if (loginPasswordInput.value.length > 0 || loginUserInput.value.length > 0) {
-        formularioReg.style.display = "none";
+        formularioReg.classList.add("oculto");
+        setTimeout(function() {
+          formularioReg.classList.add("borra");
+        }, 1000); 
+        
       } else { 
-        formularioReg.style.display = "flex";
+        formularioReg.classList.remove("oculto");
+        formularioReg.classList.remove("borra");
       }
 
       if (regPasswordInput.value.length > 0 || regUserInput.value.length > 0) {
-        formularioLogin.style.display = "none";
+        formularioLogin.classList.add("oculto");
+        setTimeout(function() {
+          formularioLogin.classList.add("borra");
+        }, 1000); 
       } else { 
-        formularioLogin.style.display = "flex";
+        formularioLogin.classList.remove("oculto");
+        formularioLogin.classList.remove("borra");
       }
      
      
@@ -60,4 +69,5 @@ document.addEventListener('DOMContentLoaded', () => {
   if (loginUserInput) addTextChangeListener(loginUserInput);
   if (regUserInput) addTextChangeListener(regUserInput);
   if (regPasswordInput) addTextChangeListener(regPasswordInput);
+ 
 });
