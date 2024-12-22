@@ -16,8 +16,9 @@ html
            
     if showLogin || showRegistration
       hr
+      img(src='public/img/blob/1.jpg' alt='1blob' class='imgBlob' id='imgBlob')
       .form-container.center
-
+            
         if showLogin
           .form-box(id='formLogin')
             h2.center Login
@@ -37,10 +38,10 @@ html
             form(action='/register', method='post')
               div
                 label Usuario:
-                input(type='text', name='username')
+                input(type='text', name='username' id='reg-user')
               div
                 label Password:
-                input(type='password', name='password')
+                input(type='password', name='password' id='reg-password')
               div
                 input(type='submit', value='Registrate')
 

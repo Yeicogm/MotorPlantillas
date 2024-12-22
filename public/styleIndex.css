@@ -22,6 +22,20 @@ h1 {
   text-align: center;
 }
 
+/* Archivo: styles.css */
+.imgBlob {
+  /*width: 100%;  Ajusta el ancho al 100% del contenedor padre */
+  max-width: 250px; /* Ancho máximo de la imagen */
+  max-height: 250px;
+  /*height: auto;  Mantiene la proporción de la imagen */
+  border: 2px solid #000; /* Borde negro de 2 píxeles */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin: 20px 0; /* Margen superior e inferior de 20 píxeles */
+  display: block; /* Hace que la imagen se comporte como un bloque */
+  object-fit: cover; /* Ajusta el contenido de la imagen */
+}
+
 .form-container {
   display: flex;
   justify-content: space-around; /* Distribuye el espacio entre los formularios */
@@ -60,6 +74,7 @@ input[type="password"] {
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
+  text-align: center;
 }
 
 input[type="submit"] {
