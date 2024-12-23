@@ -28,8 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000); 
         
       } else { 
+        setTimeout(function() {
         formularioReg.classList.remove("oculto");
         formularioReg.classList.remove("borra");
+      }, 1200); 
       }
 
       if (regPasswordInput.value.length > 0 || regUserInput.value.length > 0) {
@@ -38,8 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
           formularioLogin.classList.add("borra");
         }, 1000); 
       } else { 
+        setTimeout(function() {
         formularioLogin.classList.remove("oculto");
         formularioLogin.classList.remove("borra");
+      }, 1200); 
       }
      
      

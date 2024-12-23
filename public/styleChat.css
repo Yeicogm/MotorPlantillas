@@ -41,17 +41,18 @@ body {
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
+    overflow-y: auto;
   }
   
   #messages {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    max-height: 300px;
+    max-height: 400px;
     overflow-y: auto;
     border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
-    text-align: left;
+    text-align: left;   
   }
   
   #messages li {
